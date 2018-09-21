@@ -1,8 +1,6 @@
 # Prolog Project (MMN-17)
 
-
-
-# ==TODO==
+## <mark>TODO</mark>
 
 - understand and write down exact world representation
 - get vehicle to drive straight
