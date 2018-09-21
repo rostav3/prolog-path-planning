@@ -2,7 +2,7 @@
 
 
 
-# ==TODO==t
+# ==TODO==
 
 - understand and write down exact world representation
 - get vehicle to drive straight
