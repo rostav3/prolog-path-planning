@@ -286,7 +286,7 @@ else()
       )
     endif()
 
-    #older versions of intel mkl libs
+  #older versions of intel mkl third-party
 
     # BLAS in intel mkl library? (shared)
     if(NOT BLAS_LIBRARIES)

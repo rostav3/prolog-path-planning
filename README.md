@@ -1,12 +1,57 @@
-# Prolog Project (MMN-17)
+# Prolog Path Planning
+
+## TODO
+
+1. initialize a github repository
+2. make a map model/gateway
+3. make a telemetry model
+4. implement a trajectory model
+5. implement a dispatcher
+6. refactor utilities into a separate component (i.e encapsulated in a class).
+7. ~~remove all `using namespace` usages from whole project - do `using std::x` instead.~~ 
+8. move hardcoded strings to constants
+9. ~~use `static` and `constexp`~~
+10. implement the base 'go straight' planning policy in prolog.
+11. implement slowdown on obstacle detection in prolog.
+12. investigate constraint progamming (clfpd), temporal logic (julian) libraries, graphplan libraries.
+13. ???
+14. implement overtake planning
+15. ???
+16. profit
 
 
 
-# ==TODO==t
+## Sensor Fusion
 
-- understand and write down exact world representation
-- get vehicle to drive straight
-- test swipl bridge (it's called a 
+The data format for each car is: [ id, x, y, vx, vy, s, d]. The id is a unique identifier for that car. The x, y values are in global map coordinates, and the vx, vy values are the velocity components, also in reference to the global map. Finally s and d are the Frenet coordinates for that car.
+
+`0 1056.683 1159.969 14.97111 6.122647 274.0449 9.965927`
+
+## Path Planning
+
+The overall plan i
+
+
+
+## World Model
+
+- The world is a 6946m length highway loop.
+- Map coordinates are in meters.
+- The controller will visit all output coordinates every 0.2 seconds
+- The number of output coordinates is up to us.
+- The increment between coordinates determines the vehicle velocity, yaw, etc. 
+- there are 3 lanes in each direction of the highway
+- lanes are 4m apart
+- vehicle starts at the center lane
+- center of center lane is 6m from left edge of left lane in direction of travel.
+
+## Goals and Limits
+
+- max speed of 50 mph (80 km/h or 22 m/s)
+- max acceleration of 10 m/s^2
+- max jerk of 10 m/s^3
+
+
 
 
 
@@ -14,9 +59,11 @@
 
 Prolog based autonomous vehicle path planning expert system. 
 
-[Link to paper 1](./prolog_self_driving.pdf)
+[Link to paper 1](./prolog_autonomous_dynamic_paper.pdf)
 
-[Link to paper 2](http://home.in.tum.de/~immler/documents/rizaldi2017traffic.pdf)
+[Link to paper 2](./prolog_autonomous_road_rules_paper.pdf)
+
+[Link to paper 3](./prolog_autonomous_ferenet_trajectory.pdf)
 
 [Link to udacity project base](https://github.com/udacity/CarND-Path-Planning-Project)
 

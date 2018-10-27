@@ -5,7 +5,7 @@ if [ $# < 1 ]; then
 else
 
 mkdir -p $1
-##cp ../libs/*/*.dat $1
+##cp ../third-party/*/*.dat $1
 
 mode=large
 if [ $# > 2 ]; then

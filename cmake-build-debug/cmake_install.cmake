@@ -1,4 +1,4 @@
-# Install script for directory: /Users/roman/Downloads/prolog-path-planning
+# Install script for directory: /Users/roman/prolog-path-planning
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/roman/Downloads/prolog-path-planning/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/roman/prolog-path-planning/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

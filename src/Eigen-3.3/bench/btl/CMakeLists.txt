@@ -35,7 +35,7 @@ include_directories(
   ${PROJECT_SOURCE_DIR}/actions
   ${PROJECT_SOURCE_DIR}/generic_bench
   ${PROJECT_SOURCE_DIR}/generic_bench/utils
-  ${PROJECT_SOURCE_DIR}/libs/STL)
+        ${PROJECT_SOURCE_DIR}/third-party/STL)
 
 # find_package(MKL)
 # if (MKL_FOUND)

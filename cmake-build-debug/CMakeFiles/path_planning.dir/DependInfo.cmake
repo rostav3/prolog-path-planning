@@ -4,7 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/roman/Downloads/prolog-path-planning/src/main.cpp" "/Users/roman/Downloads/prolog-path-planning/cmake-build-debug/CMakeFiles/path_planning.dir/src/main.cpp.o"
+  "/Users/roman/prolog-path-planning/src/main.cpp" "/Users/roman/prolog-path-planning/cmake-build-debug/CMakeFiles/path_planning.dir/src/main.cpp.o"
+  "/Users/roman/prolog-path-planning/src/network_gateway.cpp" "/Users/roman/prolog-path-planning/cmake-build-debug/CMakeFiles/path_planning.dir/src/network_gateway.cpp.o"
+  "/Users/roman/prolog-path-planning/src/old_code.cpp" "/Users/roman/prolog-path-planning/cmake-build-debug/CMakeFiles/path_planning.dir/src/old_code.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

@@ -29,7 +29,7 @@ if( PKG_CONFIG_FOUND AND NOT FFTW_ROOT )
   pkg_check_modules( PKG_FFTW QUIET "fftw3" )
 endif()
 
-#Check whether to search static or dynamic libs
+#Check whether to search static or dynamic third-party
 set( CMAKE_FIND_LIBRARY_SUFFIXES_SAV ${CMAKE_FIND_LIBRARY_SUFFIXES} )
 
 if( ${FFTW_USE_STATIC_LIBS} )
@@ -40,7 +40,7 @@ endif()
 
 if( FFTW_ROOT )
 
-  #find libs
+    #find third-party
   find_library(
     FFTW_LIB
     NAMES "fftw3"

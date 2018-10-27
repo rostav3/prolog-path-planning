@@ -49,7 +49,7 @@ do
     ./smooth ${ORIG_DIR}/${BASE} 4 ${SMOOTH_DIR}/${BASE}
 done
 
-### no smoothing for tinyvector and matrices libs
+### no smoothing for tinyvector and matrices third-party
 
 TINY_BLITZ_FILE=`find ${ORIG_DIR} -name "*.dat" | grep tiny_blitz`
 for FILE in ${TINY_BLITZ_FILE}

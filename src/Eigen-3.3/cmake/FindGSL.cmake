@@ -8,7 +8,7 @@
 # GSL_FOUND       = system has GSL lib
 #
 # GSL_LIBRARIES   = full path to the libraries
-#    on Unix/Linux with additional linker flags from "gsl-config --libs"
+#    on Unix/Linux with additional linker flags from "gsl-config --third-party"
 # 
 # CMAKE_GSL_CXX_FLAGS  = Unix compiler flags for GSL, essentially "`gsl-config --cxxflags`"
 #
@@ -104,7 +104,7 @@ ELSE(WIN32)
       SET(GSL_INCLUDE_DIR ${GSL_PREFIX}/include CACHE STRING INTERNAL)
 
       # set link libraries and link flags
-      #SET(GSL_LIBRARIES "`${GSL_CONFIG} --libs`")
+      #SET(GSL_LIBRARIES "`${GSL_CONFIG} --third-party`")
       EXEC_PROGRAM(${GSL_CONFIG}
         ARGS --libs
         OUTPUT_VARIABLE GSL_LIBRARIES )

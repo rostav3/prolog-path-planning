@@ -43,10 +43,10 @@ RM = "/Users/roman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/roman/Downloads/prolog-path-planning
+CMAKE_SOURCE_DIR = /Users/roman/prolog-path-planning
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/roman/Downloads/prolog-path-planning/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/roman/prolog-path-planning/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/path_planning.dir/depend.make
@@ -59,28 +59,58 @@ include CMakeFiles/path_planning.dir/flags.make
 
 CMakeFiles/path_planning.dir/src/main.cpp.o: CMakeFiles/path_planning.dir/flags.make
 CMakeFiles/path_planning.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/roman/Downloads/prolog-path-planning/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/path_planning.dir/src/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/path_planning.dir/src/main.cpp.o -c /Users/roman/Downloads/prolog-path-planning/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/roman/prolog-path-planning/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/path_planning.dir/src/main.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/path_planning.dir/src/main.cpp.o -c /Users/roman/prolog-path-planning/src/main.cpp
 
 CMakeFiles/path_planning.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/path_planning.dir/src/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/roman/Downloads/prolog-path-planning/src/main.cpp > CMakeFiles/path_planning.dir/src/main.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/roman/prolog-path-planning/src/main.cpp > CMakeFiles/path_planning.dir/src/main.cpp.i
 
 CMakeFiles/path_planning.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/path_planning.dir/src/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/roman/Downloads/prolog-path-planning/src/main.cpp -o CMakeFiles/path_planning.dir/src/main.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/roman/prolog-path-planning/src/main.cpp -o CMakeFiles/path_planning.dir/src/main.cpp.s
+
+CMakeFiles/path_planning.dir/src/network_gateway.cpp.o: CMakeFiles/path_planning.dir/flags.make
+CMakeFiles/path_planning.dir/src/network_gateway.cpp.o: ../src/network_gateway.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/roman/prolog-path-planning/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/path_planning.dir/src/network_gateway.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/path_planning.dir/src/network_gateway.cpp.o -c /Users/roman/prolog-path-planning/src/network_gateway.cpp
+
+CMakeFiles/path_planning.dir/src/network_gateway.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/path_planning.dir/src/network_gateway.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/roman/prolog-path-planning/src/network_gateway.cpp > CMakeFiles/path_planning.dir/src/network_gateway.cpp.i
+
+CMakeFiles/path_planning.dir/src/network_gateway.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/path_planning.dir/src/network_gateway.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/roman/prolog-path-planning/src/network_gateway.cpp -o CMakeFiles/path_planning.dir/src/network_gateway.cpp.s
+
+CMakeFiles/path_planning.dir/src/old_code.cpp.o: CMakeFiles/path_planning.dir/flags.make
+CMakeFiles/path_planning.dir/src/old_code.cpp.o: ../src/old_code.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/roman/prolog-path-planning/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/path_planning.dir/src/old_code.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/path_planning.dir/src/old_code.cpp.o -c /Users/roman/prolog-path-planning/src/old_code.cpp
+
+CMakeFiles/path_planning.dir/src/old_code.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/path_planning.dir/src/old_code.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/roman/prolog-path-planning/src/old_code.cpp > CMakeFiles/path_planning.dir/src/old_code.cpp.i
+
+CMakeFiles/path_planning.dir/src/old_code.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/path_planning.dir/src/old_code.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/roman/prolog-path-planning/src/old_code.cpp -o CMakeFiles/path_planning.dir/src/old_code.cpp.s
 
 # Object files for target path_planning
 path_planning_OBJECTS = \
-"CMakeFiles/path_planning.dir/src/main.cpp.o"
+"CMakeFiles/path_planning.dir/src/main.cpp.o" \
+"CMakeFiles/path_planning.dir/src/network_gateway.cpp.o" \
+"CMakeFiles/path_planning.dir/src/old_code.cpp.o"
 
 # External object files for target path_planning
 path_planning_EXTERNAL_OBJECTS =
 
 path_planning: CMakeFiles/path_planning.dir/src/main.cpp.o
+path_planning: CMakeFiles/path_planning.dir/src/network_gateway.cpp.o
+path_planning: CMakeFiles/path_planning.dir/src/old_code.cpp.o
 path_planning: CMakeFiles/path_planning.dir/build.make
 path_planning: CMakeFiles/path_planning.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/roman/Downloads/prolog-path-planning/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable path_planning"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/roman/prolog-path-planning/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable path_planning"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/path_planning.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -93,6 +123,6 @@ CMakeFiles/path_planning.dir/clean:
 .PHONY : CMakeFiles/path_planning.dir/clean
 
 CMakeFiles/path_planning.dir/depend:
-	cd /Users/roman/Downloads/prolog-path-planning/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/roman/Downloads/prolog-path-planning /Users/roman/Downloads/prolog-path-planning /Users/roman/Downloads/prolog-path-planning/cmake-build-debug /Users/roman/Downloads/prolog-path-planning/cmake-build-debug /Users/roman/Downloads/prolog-path-planning/cmake-build-debug/CMakeFiles/path_planning.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/roman/prolog-path-planning/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/roman/prolog-path-planning /Users/roman/prolog-path-planning /Users/roman/prolog-path-planning/cmake-build-debug /Users/roman/prolog-path-planning/cmake-build-debug /Users/roman/prolog-path-planning/cmake-build-debug/CMakeFiles/path_planning.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/path_planning.dir/depend
 

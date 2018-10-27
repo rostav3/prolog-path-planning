@@ -48,10 +48,10 @@ RM = "/Users/roman/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/roman/Downloads/prolog-path-planning
+CMAKE_SOURCE_DIR = /Users/roman/prolog-path-planning
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/roman/Downloads/prolog-path-planning/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/roman/prolog-path-planning/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/roman/Downloads/prolog-path-planning/cmake-build-debug/CMakeFiles /Users/roman/Downloads/prolog-path-planning/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/roman/prolog-path-planning/cmake-build-debug/CMakeFiles /Users/roman/prolog-path-planning/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/roman/Downloads/prolog-path-planning/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/roman/prolog-path-planning/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -150,6 +150,60 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/path_planning.dir/build.make CMakeFiles/path_planning.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/network_gateway.o: src/network_gateway.cpp.o
+
+.PHONY : src/network_gateway.o
+
+# target to build an object file
+src/network_gateway.cpp.o:
+	$(MAKE) -f CMakeFiles/path_planning.dir/build.make CMakeFiles/path_planning.dir/src/network_gateway.cpp.o
+.PHONY : src/network_gateway.cpp.o
+
+src/network_gateway.i: src/network_gateway.cpp.i
+
+.PHONY : src/network_gateway.i
+
+# target to preprocess a source file
+src/network_gateway.cpp.i:
+	$(MAKE) -f CMakeFiles/path_planning.dir/build.make CMakeFiles/path_planning.dir/src/network_gateway.cpp.i
+.PHONY : src/network_gateway.cpp.i
+
+src/network_gateway.s: src/network_gateway.cpp.s
+
+.PHONY : src/network_gateway.s
+
+# target to generate assembly for a file
+src/network_gateway.cpp.s:
+	$(MAKE) -f CMakeFiles/path_planning.dir/build.make CMakeFiles/path_planning.dir/src/network_gateway.cpp.s
+.PHONY : src/network_gateway.cpp.s
+
+src/old_code.o: src/old_code.cpp.o
+
+.PHONY : src/old_code.o
+
+# target to build an object file
+src/old_code.cpp.o:
+	$(MAKE) -f CMakeFiles/path_planning.dir/build.make CMakeFiles/path_planning.dir/src/old_code.cpp.o
+.PHONY : src/old_code.cpp.o
+
+src/old_code.i: src/old_code.cpp.i
+
+.PHONY : src/old_code.i
+
+# target to preprocess a source file
+src/old_code.cpp.i:
+	$(MAKE) -f CMakeFiles/path_planning.dir/build.make CMakeFiles/path_planning.dir/src/old_code.cpp.i
+.PHONY : src/old_code.cpp.i
+
+src/old_code.s: src/old_code.cpp.s
+
+.PHONY : src/old_code.s
+
+# target to generate assembly for a file
+src/old_code.cpp.s:
+	$(MAKE) -f CMakeFiles/path_planning.dir/build.make CMakeFiles/path_planning.dir/src/old_code.cpp.s
+.PHONY : src/old_code.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,6 +216,12 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/network_gateway.o"
+	@echo "... src/network_gateway.i"
+	@echo "... src/network_gateway.s"
+	@echo "... src/old_code.o"
+	@echo "... src/old_code.i"
+	@echo "... src/old_code.s"
 .PHONY : help
 
 

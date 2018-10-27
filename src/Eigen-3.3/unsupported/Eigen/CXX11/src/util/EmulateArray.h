@@ -234,7 +234,7 @@ namespace internal {
  *                                          so use that
  *     - libstdc++ older versions: use _M_instance directly
  *     - libc++ all versions so far: use __elems_ directly
- *     - all other libs: use std::get to be portable, but
+ *     - all other third-party: use std::get to be portable, but
  *                       this may not be constexpr
  */
 #if defined(__GLIBCXX__) && __GLIBCXX__ < 20120322
