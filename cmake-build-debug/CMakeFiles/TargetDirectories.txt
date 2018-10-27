@@ -1,3 +1,0 @@
-/Users/roman/prolog-path-planning/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/roman/prolog-path-planning/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/roman/prolog-path-planning/cmake-build-debug/CMakeFiles/path_planning.dir
