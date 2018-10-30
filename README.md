@@ -2,22 +2,21 @@
 
 ## TODO
 
-1. initialize a github repository
-2. make a map model/gateway
-3. make a telemetry model
-4. implement a trajectory model
-5. implement a dispatcher
-6. refactor utilities into a separate component (i.e encapsulated in a class).
-7. ~~remove all `using namespace` usages from whole project - do `using std::x` instead.~~ 
-8. move hardcoded strings to constants
-9. ~~use `static` and `constexp`~~
-10. implement the base 'go straight' planning policy in prolog.
-11. implement slowdown on obstacle detection in prolog.
-12. investigate constraint progamming (clfpd), temporal logic (julian) libraries, graphplan libraries.
-13. ???
-14. implement overtake planning
-15. ???
-16. profit
+1. ~~implement  a map model/gateway~~
+2. make a telemetry model
+3. implement a trajectory model
+4. implement pimpl
+5. make all globals const
+6. ~~implement a dispatcher~~
+7. ~~refactor utilities into a separate component (i.e encapsulated in a class).~~
+8. ~~move hardcoded strings to constants~~
+9. implement the base 'go straight' planning policy in prolog.
+10. implement slowdown on obstacle detection in prolog.
+11. investigate constraint progamming (clfpd), temporal logic (julian) libraries, graphplan libraries.
+12. ???
+13. implement overtake planning
+14. ???
+15. profit
 
 
 
@@ -36,7 +35,7 @@ The overall plan i
 ## World Model
 
 - The world is a 6946m length highway loop.
-- Map coordinates are in meters.
+- MapGateway coordinates are in meters.
 - The controller will visit all output coordinates every 0.2 seconds
 - The number of output coordinates is up to us.
 - The increment between coordinates determines the vehicle velocity, yaw, etc. 

@@ -3,14 +3,14 @@ namespace Eigen {
 /** \eigenManualPage TutorialReshapeSlicing Reshape and Slicing
 
 %Eigen does not expose convenient methods to take slices or to reshape a matrix yet.
-Nonetheless, such features can easily be emulated using the Map class.
+Nonetheless, such features can easily be emulated using the MapGateway class.
 
 \eigenAutoToc
 
 \section TutorialReshape Reshape
 
 A reshape operation consists in modifying the sizes of a matrix while keeping the same coefficients.
-Instead of modifying the input matrix itself, which is not possible for compile-time sizes, the approach consist in creating a different \em view on the storage using class Map.
+Instead of modifying the input matrix itself, which is not possible for compile-time sizes, the approach consist in creating a different \em view on the storage using class MapGateway.
 Here is a typical example creating a 1D linear view of a matrix:
 
 <table class="example">
@@ -38,7 +38,7 @@ Here is another example reshaping a 2x6 matrix to a 6x2 one:
 \section TutorialSlicing Slicing
 
 Slicing consists in taking a set of rows, columns, or elements, uniformly spaced within a matrix.
-Again, the class Map allows to easily mimic this feature.
+Again, the class MapGateway allows to easily mimic this feature.
 
 For instance, one can skip every P elements in a vector:
 <table class="example">

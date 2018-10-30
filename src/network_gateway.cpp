@@ -8,7 +8,6 @@
 ================================================================================================================================
 */
 
-
 #include "network_gateway.h"
 
 using std::vector;
@@ -26,15 +25,23 @@ NetworkGateway::NetworkGateway() {
   init_prolog_networking();
 }
 
+
+void NetworkGateway::set_controller(PlanController *plan_controller) {
+  NetworkGateway::plan_controller = plan_controller;
+}
+
 /*--------------------------------------------------------------
  Setup simulator port listening, request callbacks, response handling, etc
  The simulator service is a websocket client, the function sets up a server for it to connect and send data to.
 --------------------------------------------------------------*/
 void NetworkGateway::init_simulator_networking() {
   websocket_hub.onMessage([this](uWS::WebSocket<uWS::SERVER> ws, char *data, size_t length, uWS::OpCode opCode) {
-	cout << "MESSAGE RECEIVED FROM SIMULATOR CLIENT" << endl;
-	string msg = "4";
-	websocket_hub.getDefaultGroup<uWS::CLIENT>().broadcast(msg.data(), msg.length(), uWS::OpCode::TEXT);
+	// cout << "MESSAGE RECEIVED FROM SIMULATOR CLIENT" << endl;
+
+	if (plan_controller!=nullptr) {
+	  plan_controller->handle_simulator_message(data, length);
+	}
+
   });
 
   websocket_hub.onConnection([](uWS::WebSocket<uWS::SERVER> ws, uWS::HttpRequest req) {
@@ -61,7 +68,7 @@ void NetworkGateway::init_simulator_networking() {
 void NetworkGateway::init_prolog_networking() {
   websocket_hub.onError([](void *user) {
 	cerr << "ERROR ON CONNECTION ATTEMPT TO LOGIC SERVER" << endl;
-	exit(EXIT_FAILURE);
+	// exit(EXIT_FAILURE);
   });
 
   websocket_hub.onConnection([](uWS::WebSocket<uWS::CLIENT> ws, uWS::HttpRequest req) {
@@ -88,6 +95,20 @@ void NetworkGateway::start() {
 }
 
 
+/*--------------------------------------------------------------
+ Send a message to the simulator
+--------------------------------------------------------------*/
+void NetworkGateway::send_message_to_simulator(string &msg) {
+  websocket_hub.getDefaultGroup<uWS::SERVER>().broadcast(msg.data(), msg.length(), uWS::OpCode::TEXT);
+}
+
+
+/*--------------------------------------------------------------
+ Send a message to the prolog server
+--------------------------------------------------------------*/
+void NetworkGateway::send_message_to_prolog(string &msg) {
+  websocket_hub.getDefaultGroup<uWS::CLIENT>().broadcast(msg.data(), msg.length(), uWS::OpCode::TEXT);
+}
 
 
 

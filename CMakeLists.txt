@@ -3,7 +3,7 @@ project(prolog-path-planning)
 
 set(CMAKE_CXX_STANDARD 17)
 
-set(SOURCES src/main.cpp src/network_gateway.cpp src/network_gateway.h src/old_code.cpp src/json.hpp)
+set(SOURCES src/main.cpp src/network_gateway.cpp src/network_gateway.h src/json.hpp src/spline.h src/map_gateway.cpp src/map_gateway.h src/plan_controller.cpp src/plan_controller.h)
 
 # MACOS SPECIFIC
 if(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")

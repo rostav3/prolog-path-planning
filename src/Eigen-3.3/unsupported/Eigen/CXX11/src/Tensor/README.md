@@ -73,7 +73,7 @@ Constructor for a Tensor.  The constructor must be passed a pointer to the
 storage for the data, and "rank" size attributes.  The storage has to be
 large enough to hold all the data.
 
-    // Map a tensor of ints on top of stack-allocated storage.
+    // MapGateway a tensor of ints on top of stack-allocated storage.
     int storage[128];  // 2 x 4 x 2 x 8 = 128
     TensorMap<int, 4> t_4d(storage, 2, 4, 2, 8);
 

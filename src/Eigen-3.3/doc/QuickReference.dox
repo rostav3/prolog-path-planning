@@ -294,20 +294,20 @@ VectorXf::Unit(4,1) == Vector4f(0,1,0,0)
 <td>Contiguous \n memory</td>
 <td>\code
 float data[] = {1,2,3,4};
-Map<Vector3f> v1(data);       // uses v1 as a Vector3f object
-Map<ArrayXf>  v2(data,3);     // uses v2 as a ArrayXf object
-Map<Array22f> m1(data);       // uses m1 as a Array22f object
-Map<MatrixXf> m2(data,2,2);   // uses m2 as a MatrixXf object
+MapGateway<Vector3f> v1(data);       // uses v1 as a Vector3f object
+MapGateway<ArrayXf>  v2(data,3);     // uses v2 as a ArrayXf object
+MapGateway<Array22f> m1(data);       // uses m1 as a Array22f object
+MapGateway<MatrixXf> m2(data,2,2);   // uses m2 as a MatrixXf object
 \endcode</td>
 </tr>
 <tr>
 <td>Typical usage \n of strides</td>
 <td>\code
 float data[] = {1,2,3,4,5,6,7,8,9};
-Map<VectorXf,0,InnerStride<2> >  v1(data,3);                      // = [1,3,5]
-Map<VectorXf,0,InnerStride<> >   v2(data,3,InnerStride<>(3));     // = [1,4,7]
-Map<MatrixXf,0,OuterStride<3> >  m2(data,2,3);                    // both lines     |1,4,7|
-Map<MatrixXf,0,OuterStride<> >   m1(data,2,3,OuterStride<>(3));   // are equal to:  |2,5,8|
+MapGateway<VectorXf,0,InnerStride<2> >  v1(data,3);                      // = [1,3,5]
+MapGateway<VectorXf,0,InnerStride<> >   v2(data,3,InnerStride<>(3));     // = [1,4,7]
+MapGateway<MatrixXf,0,OuterStride<3> >  m2(data,2,3);                    // both lines     |1,4,7|
+MapGateway<MatrixXf,0,OuterStride<> >   m1(data,2,3,OuterStride<>(3));   // are equal to:  |2,5,8|
 \endcode</td>
 </tr>
 </table>

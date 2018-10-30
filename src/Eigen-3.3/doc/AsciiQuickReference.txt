@@ -188,11 +188,11 @@ A += F.cast<double>(); // F converted to double and then added (generally, conve
 
 // Eigen can map existing memory into Eigen matrices.
 float array[3];
-Vector3f::Map(array).fill(10);            // create a temporary Map over array and sets entries to 10
+Vector3f::MapGateway(array).fill(10);            // create a temporary MapGateway over array and sets entries to 10
 int data[4] = {1, 2, 3, 4};
 Matrix2i mat2x2(data);                    // copies data into mat2x2
-Matrix2i::Map(data) = 2*mat2x2;           // overwrite elements of data with 2*mat2x2
-MatrixXi::Map(data, 2, 2) += mat2x2;      // adds mat2x2 to elements of data (alternative syntax if size is not know at compile time)
+Matrix2i::MapGateway(data) = 2*mat2x2;           // overwrite elements of data with 2*mat2x2
+MatrixXi::MapGateway(data, 2, 2) += mat2x2;      // adds mat2x2 to elements of data (alternative syntax if size is not know at compile time)
 
 // Solve Ax = b. Result stored in x. Matlab: x = A \ b.
 x = A.ldlt().solve(b));  // A sym. p.s.d.    #include <Eigen/Cholesky>
