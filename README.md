@@ -2,23 +2,33 @@
 
 ## TODO
 
-1. ~~implement  a map model/gateway~~
-2. make a telemetry model
-3. implement a trajectory model
-4. implement pimpl
-5. make all globals const
-6. ~~implement a dispatcher~~
-7. ~~refactor utilities into a separate component (i.e encapsulated in a class).~~
-8. ~~move hardcoded strings to constants~~
-9. implement the base 'go straight' planning policy in prolog.
-10. implement slowdown on obstacle detection in prolog.
-11. investigate constraint progamming (clfpd), temporal logic (julian) libraries, graphplan libraries.
-12. ???
-13. implement overtake planning
-14. ???
-15. profit
+1. implement pimpl
+2. implement stand alone pure virtual headers
+3. remove double documentations 
+4. make a telemetry model
+5. implement a trajectory model
+6. make all globals const
+7. move hardcoded strings to consts (cmd+opt+c?) 
+8. lateral speed of a vehicle is bounded by forward speed
+9. can't drive in reverse 
+10. punish for lateral velocity
+11. move numbers to constant predicates
 
+## Constrains
 
+1. constraint on total eucledian distance - 4m 
+2. constraint on direction
+3. constraint on each step distance 
+4. constraint on proximy to other cars
+5. constraint on not crossing the middle divider and boundry divider
+6. penalty for driving between lanes
+7. penalty for driving too slow
+8. penalty for getting too close to other cars
+9. constraint on re-visiting states, 
+
+### Clarifications
+
+This is basically a pacman search. We plan ahead somewhat, at each step we calculate the possible moves we can make, then choose best one according to heuristic. We can possibly backtrack somewhat if needed, but not strickly required. An goal state is not strickly required. The grid should be discretized somehow, to avoid infinite possibilities - e.g 1m, 2m, 3m, 4m, etc. Alg will select best move out of all frontier moves. 
 
 ## Sensor Fusion
 
@@ -46,7 +56,7 @@ The overall plan i
 
 ## Goals and Limits
 
-- max speed of 50 mph (80 km/h or 22 m/s)
+- max speed of 50 mph (80.4672 km/h, 22.352 m/s)
 - max acceleration of 10 m/s^2
 - max jerk of 10 m/s^3
 

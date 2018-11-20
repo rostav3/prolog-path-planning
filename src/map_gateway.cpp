@@ -24,7 +24,7 @@ MapGateway::MapGateway() {
 }
 
 
-/*--------------------------------------------------------------
+/*-----------------
  Load waypoints from map .csv file into waypoint coordinate vectors
 --------------------------------------------------------------*/
 void MapGateway::load_map_from_file() {
